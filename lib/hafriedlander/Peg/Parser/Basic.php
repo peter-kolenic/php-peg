@@ -20,7 +20,7 @@ class Basic {
 	}
 
 	function whitespace() {
-		$matched = preg_match( '/[ \t]+/', $this->string, $matches, PREG_OFFSET_CAPTURE, $this->pos ) ;
+		$matched = preg_match( '/\s+/', $this->string, $matches, PREG_OFFSET_CAPTURE, $this->pos ) ;
 		if ( $matched && $matches[0][1] == $this->pos ) {
 			$this->pos += strlen( $matches[0][0] );
 			return ' ' ;
